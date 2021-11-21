@@ -22,8 +22,9 @@ print(lista_impar)
 lista_multiplii = lista_crescator[2:3] + lista_crescator[5:6] + lista_crescator[8:9]
 print(lista_multiplii)
 
-# lista_goala = []
-# for i in lista_crescator:
-#     if i % 3 == 0:
-#         lista_goala.append(i)
-# print(lista_goala)
+lista_goala = []
+for i in lista_crescator:
+    if i % 3 == 0:
+        lista_goala.append(i)
+print(lista_goala)
+
