@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block page_header %}
+<h3>{{ topic }}</h3>
+    <h7><a href="{% url 'new_entry' topic.id %}">Add new entry</a></h7>
+{% endblock page_header %}
+{% block content %}
+
+<ul>
+    {% for entry in entries %}
+        <div class="card mb-3">
+        <h4 class="card-header">
+       {{ entry.date_added|date:'M d, Y H:i' }}
+        </h4>
+        <div class="card-body">
+            {{entry.text|linebreaks }}
+        </div>
+        </div>
+{#        <p><a href="{% url 'edit_entry' entry.id %}">Edit entry</a></p>#}
+    {% empty %}
+    <p>There are no entries for this topic yet</p>
+    {% endfor %}
+</ul>
+{% endblock content %}

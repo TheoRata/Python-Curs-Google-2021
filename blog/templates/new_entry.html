@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+ {% block page_header %}
+    <h1><a href="{% url 'topic' topic.id %}">{{ topic }}</a></h1>
+{% endblock page_header %}
+{% block content %}
+
+<h2>Add a new entry:</h2>
+<form action= "{% url 'new_entry' topic.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name='submit' class = "btn btn-primary">Add entry</button>
+</form>
+{% endblock content %}
