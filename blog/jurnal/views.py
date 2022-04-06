@@ -47,6 +47,6 @@ def new_entry(request,topic_id):
 #         form = EntryForm(instance=entry, data=request.POST)
 #         if form.is_valid():
 #             form.save()
-#             return redirect('topic', topic_id=topic_id)
+#             return redirect('topic', topic_id=topic.id)
 #     context = {'entry': entry, 'topic': topic, 'form': form}
 #     return render(request, 'edit_entry.html', context)
